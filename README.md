@@ -1,8 +1,8 @@
 # Ping my Image
-This program get the video stream from your camera and meassures the ping of your computer to https://www.otiv.ai/ and writes it over the image and displays it
+This program gets the video stream from your camera and meassures the ping of your computer to https://www.otiv.ai/ and writes it over the image and displays it
 
 ## Requirements
-All the required libraries can be installed running the intall_dependencies.sh file
+All the required libraries can be installed running the install_dependencies.sh file
 
 ## Launch
 The program doesn't have much options so it should be enough to
@@ -20,6 +20,7 @@ When you launch the program there are two options:
 ![ImageOfCameraStream](SampleImages/example1.png)
 
 2. Your camera is not recognized, then a random image will be generated every half a second with the ping written on top. 
+
 ![ImageOfRandomStream](SampleImages/example2.png)
 
 ## Stop program 

@@ -13,15 +13,25 @@ from pythonping import ping
 class PingRequester:
     def __init__(self):
         # Store ping value in ms here
-        self.__ping = 0
+        self.__ping = -1
         # When this variable changes, the thread is asked to stop
         self.__keepAlive = False
+        # Remembers if Error mesage was written to avoid repetition
+        self.__printError = True
       
     # Ping OTIV website, the URL is hard-coded, but of course it could be a parameter
     # Return ping in ms
     def ping_otiv(self):
-        response_list = ping('www.otiv.ai', size=40, count=10)
-        return response_list.rtt_avg_ms
+        temp_ping_ms = -1.0
+        try:
+            response_list = ping('www.otiv.ai', timeout = 1)
+            temp_ping_ms = response_list.rtt_avg_ms
+            self.__printError = True
+        except:
+            if(self.__printError):
+                print("Network problem")
+                self.__printError = False
+        return temp_ping_ms
         
     # Ask thread to stop (non blocking) 
     def ask_to_stop(self):
