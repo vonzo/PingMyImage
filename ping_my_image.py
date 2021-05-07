@@ -7,16 +7,18 @@ Created on Mon Apr  18 20:04:24 2021
 import concurrent.futures
 import ImageProducer as ipcv
 import PingRequester as pr
-import time 
+import queue
 
     
 if __name__ == "__main__":
     #Declare ImageProducer instance
-    image_producer = ipcv.ImageProducer(False)
+    image_producer = ipcv.ImageProducer()
+    
     #Declare PingRequester instance
     ping_requester = pr.PingRequester()
     
-    global_ping = [0]
+    #Queue continer for ping values
+    global_ping = queue.Queue()
     
     # #Config threads 
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
@@ -24,8 +26,8 @@ if __name__ == "__main__":
         camera_thread = executor.submit(image_producer.launch_webcam, global_ping)
         if(not camera_thread.result()):
             ping_requester.ask_to_stop()
-        ping_value    = ping_thread.result()
 
+    #global_ping.join()
     
     
 

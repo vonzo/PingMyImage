@@ -5,6 +5,7 @@ Created on Mon May  3 20:12:41 2021
 @author: Ivan Arevalo
 """
 import time
+import queue
 
 class PingRequester:
     def __init__(self):
@@ -22,6 +23,7 @@ class PingRequester:
     
     def loop_ping(self, global_ping):
         while(self.keepAlive):
+            temp_var = self.ping_otiv()
+            global_ping.put(temp_var)
             time.sleep(1.0)
-            global_ping[0] = self.ping_otiv()
             self.count += 1
