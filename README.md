@@ -41,7 +41,7 @@ sudo docker pull ivan1995arevalo/ping_my_image_09_04
 ```
 
 ### Launch
-To luanch the container and have acces to the displayed images you shoul run the script:
+To luanch the container and have acces to the displayed images you should run the script:
 ```
 ./launchContainer.sh
 ```
