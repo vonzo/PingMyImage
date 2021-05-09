@@ -2,12 +2,16 @@
 This program gets the video stream from your camera and meassures the ping of your computer to https://www.otiv.ai/ and writes it over the image and displays it
 
 ## Requirements
-All the required libraries can be installed running the install_dependencies.sh file
+All the required libraries can be installed running the install_dependencies.sh file, or directly calling `pip` and the requirements.txt file.
 
 ## Launch
 The program doesn't have much options so it should be enough to
 ```
 python ping_my_image.py
+```
+On several OSs the ping library need admin rights, so you may need:
+```
+sudo python ping_my_image.py
 ```
 
 just make sure the python you launch is the same where system's `pip` points to. 
