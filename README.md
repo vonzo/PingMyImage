@@ -25,3 +25,26 @@ When you launch the program there are two options:
 
 ## Stop program 
 To stop the program just hit the 'q' button (make sure no caps lock) 
+
+## Docker Image
+### Drawbacks
+This sofare was developed in a Windows Machine and I managed to test it using an ubuntu VM, because of this I couldn't test the camera in Docker, I think it is posible to use (not on Docker+Windows!) but I couldn't test it. So when running the Docker image you will always get the random image version.
+
+###Pull from Docker hub 
+Just run:
+```
+docker pull ivan1995arevalo/ping_my_image_09_04
+```
+Or probably 
+```
+sudo docker pull ivan1995arevalo/ping_my_image_09_04
+```
+
+###Launch
+To luanch the container and have acces to the displayed images you shoul run the script:
+```
+./launchContainer.sh
+```
+
+
+ 
