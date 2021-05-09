@@ -5,7 +5,7 @@ This program gets the video stream from your camera and meassures the ping of yo
 1. You should have acces to `sudo`
 2. `pip`
 3. python (3.8 is recommended)
-4. ffmpeg libsm6 libxext6 can be intalled with `apt-get install ffmpeg libsm6 libxext6  -y`
+4. ffmpeg libsm6 libxext6 can be installed with `apt-get install ffmpeg libsm6 libxext6  -y`
 5. opencv-python
 6. pythonping
 
@@ -29,7 +29,7 @@ When you launch the program there are two options:
 
 ![ImageOfCameraStream](SampleImages/example1.png)
 
-2. Your camera is not recognized, then a random image will be generated every half a second with the ping written on top.
+2. There is no camera (or can't acces the camera), then a random image will be generated every half a second with the ping written on top.
 
 ![ImageOfRandomStream](SampleImages/example2.png)
 
