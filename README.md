@@ -19,9 +19,9 @@ When you launch the program there are two options:
 
 ![ImageOfCameraStream](SampleImages/example1.png)
 
-2. Your camera is not recognized, then a random image will be generated every half a second with the ping written on top. 
+2. Your camera is not recognized, then a random image will be generated every half a second with the ping written on top.
 
 ![ImageOfRandomStream](SampleImages/example2.png)
 
 ## Stop program 
-To stop the program just hit the 'q' button (make sure no caps lock) 
+To stop the program just hit the 'q' button (make sure no caps lock)
